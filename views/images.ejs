@@ -1,0 +1,25 @@
+<form
+  action="/api/v1/upload/image"
+  method="post"
+  enctype="multipart/form-data"
+>
+  <div>
+    <label for="email">Image File (single upload):</label>
+    <br />
+    <input type="file" id="image" name="image"  />
+  </div>
+  <button type="submit">Upload Now</button>
+</form>
+<br>
+<form
+  action="/api/v1/upload/images"
+  method="post"
+  enctype="multipart/form-data"
+>
+  <div>
+    <label for="email">Image File (multiple upload):</label>
+    <br />
+    <input type="file" id="image" name="image" multiple />
+  </div>
+  <button type="submit">Upload Now</button>
+</form>
