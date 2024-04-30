@@ -2,19 +2,12 @@ require("dotenv").config();
 const express = require("express");
 const logger = require("morgan");
 const app = express();
+const router = require("./routes/v1");
+
 
 app.use(logger("dev"));
 app.use(express.json());
-app.use("/images", express.static("public/images"));
-app.use("/videos", express.static("public/videos"));
-app.use("/documents", express.static("public/docs"));
-app.set("view engine", "ejs");
-
-const routes = require("./routes");
-app.use("/api/v1", routes);
-app.get("/images", (req, res) => res.render("images"));
-app.get("/videos", (req, res) => res.render("videos"));
-app.get("/documents", (req, res) => res.render("documents"));
+app.use(router);
 
 // 500 error handler
 app.use((err, req, res, next) => {

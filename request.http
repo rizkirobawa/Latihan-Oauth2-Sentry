@@ -1,1 +1,45 @@
-POST http://localhost:3000/api/v1/upload/image
+### create user
+POST http://localhost:3000/api/v1/users
+Content-Type: application/json
+
+{
+    "first_name": "bos",
+    "last_name": "pentol",
+    "email": "pentol1@gmail.com",
+    "password": "123456"
+}
+
+### Get all user
+GET http://localhost:3000/api/v1/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzksIm5hbWUiOiJwb2tlIiwiZW1haWwiOiJwb2tlQGdtYWlsLmNvbSIsImlhdCI6MTcxMzcxNDE4NH0.rTMBaKCkfTD0oI5gm4l03JEqxzhH7LBpa0SLmUbMRIE
+
+### Get user by id
+GET http://localhost:3000/api/v1/users/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzksIm5hbWUiOiJwb2tlIiwiZW1haWwiOiJwb2tlQGdtYWlsLmNvbSIsImlhdCI6MTcxMzcxNDE4NH0.rTMBaKCkfTD0oI5gm4l03JEqxzhH7LBpa0SLmUbMRIE
+
+### Update profile
+PUT http://localhost:3000/api/v1/users/1/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzksIm5hbWUiOiJwb2tlIiwiZW1haWwiOiJwb2tlQGdtYWlsLmNvbSIsImlhdCI6MTcxMzcxNDE4NH0.rTMBaKCkfTD0oI5gm4l03JEqxzhH7LBpa0SLmUbMRIE
+Content-Type: application/json
+
+{
+    "address" : "Jl. Dhamra Utara IX",
+    "occupation" : "IT Consultan" 
+}
+
+### Login user
+POST http://localhost:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "pentol1@gmail.com",
+    "password": "123456"
+}
+
+### verified login
+GET http://localhost:3000/api/v1/auth/authenticate
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZmlyc3RfbmFtZSI6ImJvcyIsImxhc3RfbmFtZSI6InBlbnRvbCIsImVtYWlsIjoicGVudG9sMUBnbWFpbC5jb20iLCJhZGRyZXNzIjpudWxsLCJvY2N1cGF0aW9uIjpudWxsLCJhdmF0YXJfdXJsIjpudWxsLCJpYXQiOjE3MTQ0NTg0NTB9.2S9ad6sWe4JwKOXX8X_sopwXbdCbc9DWe0jLB8yoiII
+
+### Delete user
+DELETE  http://localhost:3000/api/v1/users/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzksIm5hbWUiOiJwb2tlIiwiZW1haWwiOiJwb2tlQGdtYWlsLmNvbSIsImlhdCI6MTcxMzcxNDE4NH0.rTMBaKCkfTD0oI5gm4l03JEqxzhH7LBpa0SLmUbMRIE

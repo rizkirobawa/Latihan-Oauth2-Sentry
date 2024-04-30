@@ -25,7 +25,7 @@ module.exports = {
   },
   generateQR: async (req, res, next) => {
     try {
-      let qr_data = req.body.qr_data;
+      let { qr_data } = req.body.qr_data;
       if (!qr_data) {
         res.status(400).json({
           status: false,

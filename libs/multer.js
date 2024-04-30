@@ -42,65 +42,8 @@ module.exports = {
       next(err);
     },
   }),
-  videoStorage: multer({
-    storage: generateStorage("./public/videos"),
-    fileFilter: (req, file, callback) => {
-      let allowedMimetypes = ["video/mp4", "video/mpeg"];
-      if (allowedMimetypes.includes(file.mimetype)) {
-        callback(null, true);
-      } else {
-        let err = new Error(`Only ${allowedMimetypes} are allowed to upload!`);
-        callback(err, false);
-      }
-    },
-    onError: (err, next) => {
-      next(err);
-    },
-  }),
-  documentStorage: multer({
-    storage: generateStorage("./public/docs"),
-    fileFilter: (req, file, callback) => {
-      let allowedMimetypes = [
-        "text/plain",
-        "application/pdf",
-        "application/vnd.ms-excel",
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        "application/msword",
-        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      ];
-      if (allowedMimetypes.includes(file.mimetype)) {
-        callback(null, true);
-      } else {
-        let err = new Error(`Only ${allowedMimetypes} are allowed to upload!`);
-        callback(err, false);
-      }
-    },
-    onError: (err, next) => {
-      next(err);
-    },
-  }),
-
   image: multer({
     fileFilter: generateFileFilter(["image/png", "image/jpg", "image/jpeg"]),
-    onError: (err, next) => {
-      next(err);
-    },
-  }),
-  document: multer({
-    fileFilter: generateFileFilter([
-      "text/plain",
-      "application/pdf",
-      "application/vnd.ms-excel",
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "application/msword",
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-    ]),
-    onError: (err, next) => {
-      next(err);
-    },
-  }),
-  video: multer({
-    fileFilter: generateFileFilter(["video/mp4", "video/mpeg"]),
     onError: (err, next) => {
       next(err);
     },
