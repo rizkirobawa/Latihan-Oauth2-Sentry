@@ -55,6 +55,10 @@ module.exports = {
         where: { first_name: { contains: search, mode: "insensitive" } },
       });
 
+      users.map((user) => {
+        delete user.password;
+      });
+
       res.status(200).json({
         status: true,
         message: "OK",
@@ -80,6 +84,8 @@ module.exports = {
           data: null,
         });
       }
+
+      delete users.password;
 
       res.status(200).json({
         status: true,

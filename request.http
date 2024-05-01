@@ -4,8 +4,8 @@ Content-Type: application/json
 
 {
     "first_name": "bos",
-    "last_name": "pentol",
-    "email": "pentol1@gmail.com",
+    "last_name": "mafia",
+    "email": "mafia1@gmail.com",
     "password": "123456"
 }
 
@@ -14,7 +14,7 @@ GET http://localhost:3000/api/v1/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzksIm5hbWUiOiJwb2tlIiwiZW1haWwiOiJwb2tlQGdtYWlsLmNvbSIsImlhdCI6MTcxMzcxNDE4NH0.rTMBaKCkfTD0oI5gm4l03JEqxzhH7LBpa0SLmUbMRIE
 
 ### Get user by id
-GET http://localhost:3000/api/v1/users/1
+GET http://localhost:3000/api/v1/users/4
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzksIm5hbWUiOiJwb2tlIiwiZW1haWwiOiJwb2tlQGdtYWlsLmNvbSIsImlhdCI6MTcxMzcxNDE4NH0.rTMBaKCkfTD0oI5gm4l03JEqxzhH7LBpa0SLmUbMRIE
 
 ### Update profile
@@ -32,7 +32,7 @@ POST http://localhost:3000/api/v1/auth/login
 Content-Type: application/json
 
 {
-    "email": "pentol1@gmail.com",
+    "email": "mafia1@gmail.com",
     "password": "123456"
 }
 
