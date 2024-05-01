@@ -9,6 +9,8 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(router);
 
+app.get('/', (req,res) => res.json({status: true, message: "Hello World!", data: null}))
+
 // 500 error handler
 app.use((err, req, res, next) => {
   console.log(err);
