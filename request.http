@@ -3,9 +3,9 @@ POST http://localhost:3000/api/v1/users
 Content-Type: application/json
 
 {
-    "first_name": "bos",
-    "last_name": "mafia",
-    "email": "mafia1@gmail.com",
+    "first_name": "poke",
+    "last_name": "bos",
+    "email": "dewa@gmail.com",
     "password": "123456"
 }
 
@@ -32,13 +32,13 @@ POST http://localhost:3000/api/v1/auth/login
 Content-Type: application/json
 
 {
-    "email": "mafia1@gmail.com",
+    "email": "poke@gmail.com",
     "password": "123456"
 }
 
 ### verified login
 GET http://localhost:3000/api/v1/auth/authenticate
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZmlyc3RfbmFtZSI6ImJvcyIsImxhc3RfbmFtZSI6InBlbnRvbCIsImVtYWlsIjoicGVudG9sMUBnbWFpbC5jb20iLCJhZGRyZXNzIjpudWxsLCJvY2N1cGF0aW9uIjpudWxsLCJhdmF0YXJfdXJsIjpudWxsLCJpYXQiOjE3MTQ0NTg0NTB9.2S9ad6sWe4JwKOXX8X_sopwXbdCbc9DWe0jLB8yoiII
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZmlyc3RfbmFtZSI6ImRld2EiLCJsYXN0X25hbWUiOiJwb2tlIiwiZW1haWwiOiJkZXdhQGdtYWlsLmNvbSIsImFkZHJlc3MiOm51bGwsIm9jY3VwYXRpb24iOm51bGwsImF2YXRhcl91cmwiOm51bGwsImlhdCI6MTcxNDU3NTM0M30.XNTWNTE39ra_xxVavIAC15iz4WVPSiCFbKioUZ9uTtY
 
 ### Delete user
 DELETE  http://localhost:3000/api/v1/users/2

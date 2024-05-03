@@ -1,0 +1,23 @@
+###
+POST https://expressjs-development-25de.up.railway.app/api/v1/users
+Content-Type: application/json
+
+{
+    "first_name": "poke",
+    "last_name": "bos",
+    "email": "dewa@gmail.com",
+    "password": "123456"
+}
+
+### Login user
+POST https://expressjs-development-25de.up.railway.app/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "dewa@gmail.com",
+    "password": "123456"
+}
+
+### verified login
+GET https://expressjs-development-25de.up.railway.app/api/v1/auth/authenticate
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6InBva2UiLCJsYXN0X25hbWUiOiJib3MiLCJlbWFpbCI6ImRld2FAZ21haWwuY29tIiwiYWRkcmVzcyI6bnVsbCwib2NjdXBhdGlvbiI6bnVsbCwiYXZhdGFyX3VybCI6bnVsbCwiaWF0IjoxNzE0NTc1NjE0fQ.WXp_STcVApibmhjT6qXw6ta3xifVo6bIJ2Nv9-mQqhI
