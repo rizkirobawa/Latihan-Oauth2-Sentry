@@ -1,11 +1,11 @@
 ###
-POST https://expressjs-development-25de.up.railway.app/api/v1/users
+POST https://express-js-production-c54b.up.railway.app/api/v1/users
 Content-Type: application/json
 
 {
-    "first_name": "poke",
-    "last_name": "bos",
-    "email": "dewa@gmail.com",
+    "first_name": "bagoes",
+    "last_name": "krian",
+    "email": "bagoes@gmail.com",
     "password": "123456"
 }
 

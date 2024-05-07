@@ -1,8 +1,9 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
 const User = require("../v1/user.routes");
-const Auth = require("../v1/auth.routes")
+const Auth = require("../v1/auth.routes");
 const { imageStorage, image } = require("../../libs/multer");
+
 
 router.post("/upload/image", imageStorage.single("image"), (req, res) => {
   let imageUrl = `${req.protocol}://${req.get("host")}/images/${
@@ -29,11 +30,14 @@ const {
   imageKitUpload,
   generateQR,
 } = require("../../controllers/media.controllers");
+
 router.post("/imagekit/upload/image", image.single("file"), imageKitUpload);
 router.post("/qr/generate", generateQR);
 
 // User Endpoint
 router.use("/api/v1", User);
 router.use("/api/v1", Auth);
+
+
 
 module.exports = router;

@@ -3,10 +3,15 @@ const prisma = new PrismaClient();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET_KEY } = process.env;
+// const Sentry = require("../libs/sentry");
 
 module.exports = {
   login: async (req, res, next) => {
     try {
+      //   if (1 == 1) {
+      //     Sentry.captureException("bla bla bla");
+      //   }
+
       let { email, password } = req.body;
       if (!email || !password) {
         return res.status(400).json({
@@ -29,13 +34,15 @@ module.exports = {
 
       await bcrypt.compare(password, user.password);
 
-      delete user.password;
-      let token = jwt.sign(user, JWT_SECRET_KEY);
+      // delete user.password;
+      // let token = jwt.sign(user, JWT_SECRET_KEY);
+    let token = jwt.sign({id: req.user.id}, JWT_SECRET_KEY);
+
 
       res.json({
         status: true,
         message: "OK",
-        data: { ...user, token },
+        data: { user, token },
       });
     } catch (error) {
       next(error);
@@ -52,5 +59,17 @@ module.exports = {
     } catch (error) {
       next(error);
     }
+  },
+
+  googleOauth2: (req, res) => {
+    // let token = jwt.sign({ ...req.user }, JWT_SECRET_KEY);
+    let token = jwt.sign({id: req.user.id, password: null}, JWT_SECRET_KEY);
+
+    res.json({
+      status: true,
+      message: "OK",
+      err: null,
+      data: { user:req.user, token },
+    });
   },
 };

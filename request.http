@@ -5,26 +5,26 @@ Content-Type: application/json
 {
     "first_name": "poke",
     "last_name": "bos",
-    "email": "dewa@gmail.com",
+    "email": "rizkirobawa@gmail.com",
     "password": "123456"
 }
 
 ### Get all user
 GET http://localhost:3000/api/v1/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzksIm5hbWUiOiJwb2tlIiwiZW1haWwiOiJwb2tlQGdtYWlsLmNvbSIsImlhdCI6MTcxMzcxNDE4NH0.rTMBaKCkfTD0oI5gm4l03JEqxzhH7LBpa0SLmUbMRIE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwicGFzc3dvcmQiOm51bGwsImlhdCI6MTcxNTA3MzY5NX0.pB8eVEtsjusmxS52_zpOWG3a3HusUhG1ycRCDPIf7gQ
 
 ### Get user by id
 GET http://localhost:3000/api/v1/users/4
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzksIm5hbWUiOiJwb2tlIiwiZW1haWwiOiJwb2tlQGdtYWlsLmNvbSIsImlhdCI6MTcxMzcxNDE4NH0.rTMBaKCkfTD0oI5gm4l03JEqxzhH7LBpa0SLmUbMRIE
 
 ### Update profile
-PUT http://localhost:3000/api/v1/users/1/profile
+PUT http://localhost:3000/api/v1/users/8/profile
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzksIm5hbWUiOiJwb2tlIiwiZW1haWwiOiJwb2tlQGdtYWlsLmNvbSIsImlhdCI6MTcxMzcxNDE4NH0.rTMBaKCkfTD0oI5gm4l03JEqxzhH7LBpa0SLmUbMRIE
 Content-Type: application/json
 
 {
     "address" : "Jl. Dhamra Utara IX",
-    "occupation" : "IT Consultan" 
+    "occupation" : "Software Engineer" 
 }
 
 ### Login user
@@ -38,8 +38,8 @@ Content-Type: application/json
 
 ### verified login
 GET http://localhost:3000/api/v1/auth/authenticate
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZmlyc3RfbmFtZSI6ImRld2EiLCJsYXN0X25hbWUiOiJwb2tlIiwiZW1haWwiOiJkZXdhQGdtYWlsLmNvbSIsImFkZHJlc3MiOm51bGwsIm9jY3VwYXRpb24iOm51bGwsImF2YXRhcl91cmwiOm51bGwsImlhdCI6MTcxNDU3NTM0M30.XNTWNTE39ra_xxVavIAC15iz4WVPSiCFbKioUZ9uTtY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicGFzc3dvcmQiOm51bGwsImlhdCI6MTcxNTA3Mzc4M30.lIz2B91oV3FWtzFIjLyWaKz-hZa3p7xJZ74rTN6kRuQ
 
 ### Delete user
-DELETE  http://localhost:3000/api/v1/users/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzksIm5hbWUiOiJwb2tlIiwiZW1haWwiOiJwb2tlQGdtYWlsLmNvbSIsImlhdCI6MTcxMzcxNDE4NH0.rTMBaKCkfTD0oI5gm4l03JEqxzhH7LBpa0SLmUbMRIE
+DELETE  http://localhost:3000/api/v1/users/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicGFzc3dvcmQiOm51bGwsImlhdCI6MTcxNTA3MzczMX0.A907SQEArZkTFa163OdqdQv3zFXUaXXrHu-WLga7hds
